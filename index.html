@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="flex flex-col justify-center items-center h-lvh">
+    <div class="container">
+      <div class="inputs">
+        <div class="color-inputs flex gap-5 mb-6">
+          <div class="flex items-center gap-4">
+            <label for="color1"><b>Color 1:</b></label>
+            <input type="color" id="color1" value="#ff0000" />
+          </div>
+          <div class="flex items-center gap-4">
+            <label for="color2"><b>Color 2:</b></label>
+            <input type="color" id="color2" value="#0000ff" />
+          </div>
+        </div>
+        <div class="degree-input mb-5 flex items-center gap-4">
+          <label for="degree"><b>Degree:</b></label>
+          <input
+            class="accent-slate-600 h-1 w-32"
+            type="range"
+            id="degree"
+            value="90"
+            min="0"
+            max="360"
+          />
+          <span id="degree-value">90°</span>
+        </div>
+      </div>
+      <button
+        id="generate-btn"
+        class="bg-slate-500 border border-black px-3 py-1 rounded-2xl text-white mb-2"
+      >
+        Generate Gradient
+      </button>
+      <div class="gradient-display" id="gradient-display"></div>
+      <div class="code-display" id="code-display"></div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
